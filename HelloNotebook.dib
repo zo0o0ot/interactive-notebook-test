@@ -1,0 +1,12 @@
+#!csharp
+
+Console.WriteLine(".NET Interactive Hello World!");
+
+#!markdown
+
+# I'm still figuring this out.
+
+#!markdown
+
+* Lists appear to work
+* At least, I think they do.
