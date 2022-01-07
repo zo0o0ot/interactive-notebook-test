@@ -1,5 +1,6 @@
 #!csharp
 
+string thingToReferToLater = "This is a blast from the past!";
 Console.WriteLine(".NET Interactive Hello World!");
 
 #!markdown
@@ -10,3 +11,7 @@ Console.WriteLine(".NET Interactive Hello World!");
 
 * Lists appear to work
 * At least, I think they do.
+
+#!csharp
+
+Console.WriteLine(thingToReferToLater);
