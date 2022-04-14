@@ -1,5 +1,7 @@
 #!csharp
 
+#r "nuget:Microsoft.DotNet.Interactive.ExtensionLab,*-*"
+
 string thingToReferToLater = "This is a blast from the past!";
 Console.WriteLine(".NET Interactive Hello World!");
 
@@ -14,4 +16,56 @@ Console.WriteLine(".NET Interactive Hello World!");
 
 #!csharp
 
+#r "nuget: CsvHelper, 27.2.1"
 Console.WriteLine(thingToReferToLater);
+
+#!csharp
+
+#r "nuget: SandDance.InteractiveExtension, 1.0.45"
+#r "nuget:Microsoft.Data.Analysis,*-*"
+
+#!csharp
+
+using Microsoft.Data.Analysis;
+using System.Collections.Generic;
+using Microsoft.ML;
+
+var data = DataFrame.LoadCsv("./draftData/2021Draft.csv");
+//data.ExploreWithSandDance().Display();
+
+#!csharp
+
+var a = data.ToTabularDataResource();
+
+#!csharp
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+
+using System.IO;
+using CsvHelper;
+
+
+    class LumenWorksCSVExample
+    {
+
+        /// <summary>
+        /// Example code to fetch a CSV file and turn it into a DataTable
+        /// using the LumenWorks.Framework.IO.Csv library
+        /// </summary>
+        /// <param name="filePath">The full path of the CSV file</param>
+        /// <returns>A DataTable with all-string columns</returns>
+        public DataTable FetchFromCSVFile(string filePath)
+        {
+            DataTable csvTable = new DataTable();
+            using (CsvReader csvReader =
+                new CsvReader(new StreamReader(filePath),true))
+            {
+                csvTable.Load(csvReader);
+            }
+            return csvTable;
+        }
+    }
