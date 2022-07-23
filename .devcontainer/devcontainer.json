@@ -42,8 +42,9 @@
 	"extensions": [
 		"GitHub.vscode-pull-request-github",
 		"ms-dotnettools.dotnet-interactive-vscode",
-		"ms-azuretools.vscode-docker",
-		"ms-toolsai.jupyter"
+		"ms-toolsai.jupyter",
+		"mechatroner.rainbow-csv",
+		"msrvida.vscode-sanddance"
 	],
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
